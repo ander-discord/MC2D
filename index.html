@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MC</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; background: #111; overflow: hidden; image-rendering: pixelated; image-rendering: crisp-edges; }
+
+    @font-face {
+      font-family: 'Silkscreen';
+      src: url('assets/Silkscreen-Regular.ttf') format('truetype');
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/silkscreen-font@1.0.0/silkscreen.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+  <canvas id="Game" width="0" height="0"></canvas>
+  <script src="https://cdn.jsdelivr.net/gh/joeiddon/perlin@master/perlin.js"></script>
+  <script src="mindex.js"></script>
+</body>
+</html>
