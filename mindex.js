@@ -632,7 +632,7 @@ function drawGUI() {
   ctx.fillStyle = 'white';
 
   const chatX = 10;
-  let chatY = canvas.height - 264;
+  let chatY = 10;
 
   for (let i = 0; i < chatMessages.length; i++) {
     ctx.fillText(`[${chatMessages[i].username}] ${chatMessages[i].content}`, chatX, chatY);
