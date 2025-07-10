@@ -395,8 +395,11 @@ function handleCommand(message) {
 
 function getControl() {
   const gamepadkeys = [];
+  try {
   const gamepads = navigator.getGamepads();
+  } catch {}
 
+  try {
   for (const gp of gamepads) {
     if (!gp) continue;
 
@@ -438,6 +441,7 @@ function getControl() {
       holdRight = 1;
     }
   }
+  } catch {}
 
   const activeKeys = Object.keys(keys).filter(k => keys[k]);
   const combinedKeys = [...gamepadkeys, ...activeKeys];
