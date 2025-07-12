@@ -53,6 +53,7 @@ let holdRight = 0;
 let time = 1;
 let selectedSlot = 0;
 let chats = [];
+let chatMessages = [];
 let isTyping = false;
 let chatInput = '';
 let username = prompt('username:');
