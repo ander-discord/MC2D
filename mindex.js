@@ -52,7 +52,7 @@ let holdLeft = 0;
 let holdRight = 0;
 let time = 1;
 let selectedSlot = 0;
-let chatMessages = [];
+let chats = [];
 let isTyping = false;
 let chatInput = '';
 let username = prompt('username:');
@@ -390,14 +390,14 @@ function handleCommand(message) {
     } else {
       chatMessages.push({ username: "system", content: `Usage: /nick <nickname>` });
     }
+  } else if (message.content === '/c') {
+    chatMessages = [];
   }
 }
 
 function getControl() {
   const gamepadkeys = [];
-  try {
   const gamepads = navigator.getGamepads();
-  } catch {}
 
   try {
   for (const gp of gamepads) {
